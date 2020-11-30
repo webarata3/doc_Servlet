@@ -1,0 +1,20 @@
+site_name: JavaによるWebアプリケーション作成
+theme:
+  name: material
+markdown_extensions:
+  - admonition
+  - pymdownx.highlight:
+      linenums: true
+  - pymdownx.superfences
+  - pymdownx.keys
+extra_javascript:
+  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js
+  - javascripts/config.js
+extra_css:
+  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/vs.min.css
+
+nav:
+  - はじめに: index.md
+  - 第1章:
+    - 1-1 aaa: 01/01-01.md
+    - 1-2 bbb: 01/01-02.md
