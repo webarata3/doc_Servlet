@@ -15,3 +15,5 @@ Java言語を使って、DBを使ったWebアプリケーションが作るこ�
 - CSS
 - JavaScript
 
+定義
+:   aaaa

@@ -7,6 +7,7 @@ markdown_extensions:
       linenums: true
   - pymdownx.superfences
   - pymdownx.keys
+  - def_list
 extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js
   - javascripts/config.js

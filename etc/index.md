@@ -82,3 +82,13 @@ markdown_extensions:
 
 !!! quote
     test
+
+# 定義リスト
+
+``` markdown
+markdown_extensions:
+  - def_list
+```
+
+定義語
+:    ここに説明を書きます
