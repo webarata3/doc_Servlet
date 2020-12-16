@@ -16,7 +16,8 @@ extra_css:
 
 nav:
   - はじめに: index.md
-  - 第1章 開発準備: 01/index.md
+  - 第1章 Webアプリケーション: 01/index.md
+  - 第2章 開発準備: 02/index.md
 
 
 # - 第1章 はじめに:
