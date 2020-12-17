@@ -24,7 +24,7 @@ OpenJDKは、[https://jdk.java.net/15/](https://jdk.java.net/15/)からダウン
 
 ![Screenshot](image/image01.png)
 
-現時点では、OpenJDKのバージョンが15.01のため、ダウンロードしたファイルを展開すると`jdk-15.0.1`というフォルダーができます。このフォルダーを`C:\dev`フォルダーに移動してください。
+現時点では、OpenJDKのバージョンが15.01のため、ダウンロードしたファイルを展開すると`jdk-15.0.1`というフォルダーができます。このフォルダーを`C:\dev\Servlet`フォルダーに移動してください。
 
 ### Eclipseのインストール
 
@@ -36,7 +36,7 @@ OpenJDKは、[https://jdk.java.net/15/](https://jdk.java.net/15/)からダウン
 
 ![Screenshot](image/image03.png)
 
-ダウンロードしたファイルを展開すると`eclipse`というフォルダーができます。このフォルダーを`C:\dev`フォルダーに移動してください。
+ダウンロードしたファイルを展開すると`eclipse`というフォルダーができます。このフォルダーを`C:\dev\Servlet`フォルダーに移動してください。
 
 ### Tomcatのインストール
 
