@@ -12,8 +12,10 @@ Java言語を使って、DBを使ったWebアプリケーションが作るこ�
     - 一通りの文法が理解できる
     - コレクションフレームワークが使える（`List`、`Map`、`Set`が使えればいいです）
 - HTML
+    - 基本的なタグの使い方。リンク（`a`）、画像（`img`）、フォーム（`form`）が作れること
 - CSS
 - JavaScript
+    - 基本的なDOM操作（`getElementById`や`querySelector`）や基本的な構文（`if`、`for`等）、また、Ajax（`fetch`）がわかること
 
 定義
 :   aaaa

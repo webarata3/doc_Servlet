@@ -66,29 +66,7 @@ C:\dev\Servlet\eclipse\eclipse.exe -vm C:\dev\Servlet\jdk-15.0.1\bin\javaw.exe -
 
 ## プラグインのインストール
 
-### Java 15 Support
-
-最初にJava 15のサポートのプラグインをインストールします。「Help」メニューから「Eclipse Marketplace」を選択します。ダイアログが表示されるので「Java 15」で検索します。検索後「Java 15 Support for Eclipse 2020-09 (4.17)」の「Install」ボタンを押します。
-
-![Screenshot](image/image06.png)
-
-次の画面は、そのまま「Confirm」を押します。
-
-![Screenshot](image/image07.png)
-
-その次は、ライセンスに同意して「Finish」を押します。
-
-![Screenshot](image/image08.png)
-
-しばらく待つと、Eclipseの再起動が促されますので、「Restart Now」で再起動します。
-
-![Screenshot](image/image09.png)
-
-その他プラグインについて
-
-その他、好みに応じて入れてください。私がよく入れるのは次のものです。
-
-- EasyShell
+プラグインは、特にインストールしません。
 
 ## 設定
 
