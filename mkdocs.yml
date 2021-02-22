@@ -16,6 +16,7 @@ extra_javascript:
 extra_css:
   - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/vs.min.css
   - css/custom.css
+# use_directory_urls: false
 
 nav:
   - はじめに: index.md
