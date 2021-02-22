@@ -15,11 +15,16 @@ extra_javascript:
   - javascripts/config.js
 extra_css:
   - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/vs.min.css
+  - css/custom.css
 
 nav:
   - はじめに: index.md
   - 第1章 Webアプリケーション: 01/index.md
   - 第2章 開発準備: 02/index.md
+#  - 第3章 HTTP
+#  - 第4章 サーブレットの基本
+#  - 第5章 JSPの基本
+#  - 第6章 スコープ
 
 
 # - 第1章 はじめに:
