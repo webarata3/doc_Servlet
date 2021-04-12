@@ -11,10 +11,10 @@ markdown_extensions:
   - abbr
   - footnotes
 extra_javascript:
-  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js
+  - js/highlight.min.js
   - javascripts/config.js
 extra_css:
-  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/vs.min.css
+  - css/vs.min.css
   - css/custom.css
 # use_directory_urls: false
 
