@@ -20,11 +20,11 @@ Eclipseのフォルダー階層が深くなるとあまり良くないので、�
 
 ### OpenJDKのインストール
 
-OpenJDKは、[https://jdk.java.net/15/](https://jdk.java.net/15/)からダウンロードします。ダウンロードは、図のように**Windows/x64**のzipファイルをダウンロードします。
+OpenJDKは、[https://jdk.java.net/16/](https://jdk.java.net/16/)からダウンロードします。ダウンロードは、図のように**Windows/x64**のzipファイルをダウンロードします。
 
 ![Screenshot](image/image01.png)
 
-現時点では、OpenJDKのバージョンが15.01のため、ダウンロードしたファイルを展開すると`jdk-15.0.1`というフォルダーができます。このフォルダーを`C:\dev`フォルダーに移動してください。
+現時点では、OpenJDKのバージョンが16のため、ダウンロードしたファイルを展開すると`jdk-16`というフォルダーができます。このフォルダーを`C:\dev\Servlet`フォルダーに移動してください。
 
 ### Eclipseのインストール
 
@@ -36,15 +36,15 @@ OpenJDKは、[https://jdk.java.net/15/](https://jdk.java.net/15/)からダウン
 
 ![Screenshot](image/image03.png)
 
-ダウンロードしたファイルを展開すると`eclipse`というフォルダーができます。このフォルダーを`C:\dev`フォルダーに移動してください。
+ダウンロードしたファイルを展開すると`eclipse`というフォルダーができます。このフォルダーを`C:\dev\Servlet`フォルダーに移動してください。
 
 ### Tomcatのインストール
 
-[Tomcatのページ](https://tomcat.apache.org/download-90.cgi)で「Core」の「zip」リンクを押します
+[Tomcatのページ](https://tomcat.apache.org/download-10.cgi)で「Core」の「zip」リンクを押します
 
 ![Screenshot](image/image04.png)
 
-現時点では、Tomcatのバージョンが9.0.40のため、ダウンロードしたファイルを展開すると`apache-tomcat-9.0.40`というフォルダーができます。このフォルダーを`C:\dev\Servlet`フォルダーに移動してください。
+現時点では、Tomcatのバージョンが10.0.5のため、ダウンロードしたファイルを展開すると`apache-tomcat-10.0.5`というフォルダーができます。このフォルダーを`C:\dev\Servlet`フォルダーに移動してください。
 
 ### Eclipseのワークスペースの作成
 
@@ -54,19 +54,41 @@ Eclipseはワークスペースという、Eclipse内で作成するファイル
 
 Eclipseのショートカットに、起動時の設定をしておくことができます。
 
-まず、Eclipseのショートカットを作成します。本体は`C:\dev\eclipse\eclipse.exe`です。このショートカットを任意の場所に作ってください。
+まず、Eclipseのショートカットを作成します。本体は`C:\dev\Servlet\eclipse\eclipse.exe`です。このショートカットを任意の場所に作ってください。
 
 ショートカットのプロパティを開き、リンク先を次の内容にしてください。
 
 ```
-C:\dev\Servlet\eclipse\eclipse.exe -vm C:\dev\Servlet\jdk-15.0.1\bin\javaw.exe -data C:\dev\Servlet\ws -vmargs -Dfile.encoding=utf-8
+C:\dev\Servlet\eclipse\eclipse.exe -vm C:\dev\Servlet\jdk-16\bin\javaw.exe -data C:\dev\Servlet\ws -vmargs -Dfile.encoding=utf-8
 ```
 
 ![Screenshot](image/image05.png)
 
 ## プラグインのインストール
 
-プラグインは、特にインストールしません。
+### Java 16対応
+
+Java 16対応するために、プラグインを追加します。
+
+「Help」メニューから「Eclipse Marketplace」を選びます。
+
+![Screenshot](image/image06.png)
+
+表示されるダイアログで、「Java 16」と入力し++enter++キーを押します。しばらく待つと検索結果が表示されるので++"Install"++ボタンを押します。
+
+![Screenshot](image/image07.png)
+
+次の画面は++"Confirm"++を押します。
+
+![Screenshot](image/image08.png)
+
+次の画面はライセンスに同意するかどうかで、++"I accept～"++を選んで、++"Finish"++を押します。
+
+![Screenshot](image/image09.png)
+
+インストールが終わるとリスタートが求められますので、リスタートします。
+
+![Screenshot](image/image10.png)
 
 ## 設定
 
@@ -85,17 +107,23 @@ C:\dev\Servlet\eclipse\eclipse.exe -vm C:\dev\Servlet\jdk-15.0.1\bin\javaw.exe -
 
 フォーマッターを設定する場合には「New」ボタンを押し、フォーマッターの名前を決めます。ここでは`Basic`としておきます。作った上で、「Edit」ボタンを押し変更していきます。今回は、「Indentation」の「Tab policy」を「Spaces only」にします。
 
+さらに、`switch`のフォーマットも変更します。「Indentation」の「Indented elements」の「Statments within 'case' body」にチェックを入れます。
+
 もう一点、`static import`の場合には、`import`に*を使ってほしいため、「Java」>「Code Style」>「Organize Imports」を選び、画面の下部にある「Number of static imports needed for .*」を`1`にします。
+
+最後に、ファイルを保存したときに自動的に`import`の編成を行うようにするのと、コードのフォーマットをするように設定します。「Java」>「Editor」>「Save Actions」を選び、「Perform the selected actions on save」と「Format source code」にチェックを入れます。
 
 ### Tomcatの設定
 
-「Server」>「Runtime Environments」を選択し「Add」ボタンを押します。今回はTomcat 9をインストールしたので「Apache Tomcat v9.0」を選択し「Next」を押します。「Tomcat installation directory」にTomcatをインストールしたディレクトリー`C:\dev\apache-tomcat-9.0.40`を指定します。
+「Server」>「Runtime Environments」を選択し「Add」ボタンを押します。今回はTomcat 10をインストールしたので「Apache Tomcat v10.0」を選択し「Next」を押します。「Tomcat installation directory」にTomcatをインストールしたディレクトリー`C:\dev\Servlet\apache-tomcat-10.0.5`を指定します。
 
 設定したら、設定のダイアログを閉じます。画面下部の「Servers」タブを選択し、「No servers are available. Click this link to create a new server.」を押します。
 
-![Screenshot](image/image10.png)
+![Screenshot](image/image11.png)
 
-「Tomcat v9.0 Server」を選択し、「Finish」を押します。
+「Tomcat v10.0 Server」を選択し、「Finish」を押します。
+
+![Screenshot](image/image12.png)
 
 ## 使い方
 
@@ -105,27 +133,27 @@ C:\dev\Servlet\eclipse\eclipse.exe -vm C:\dev\Servlet\jdk-15.0.1\bin\javaw.exe -
 
 プロジェクトの作成は「File」メニューから「New」>「Dynamic Web Project」を選択します。
 
-![Screenshot](image/image11.png)
+![Screenshot](image/image13.png)
 
 ダイアログで「Project name」に`hello`と入れて「Finish」を押します。
 
-![Screenshot](image/image12.png)
+![Screenshot](image/image14.png)
 
-「Project Explorer」にプロジェクトが表示されるので「Java Resources」>「src」の順に展開していきます。Javaのプログラムはこの「src」の中に作成します。
+「Project Explorer」にプロジェクトが表示されるます。「hello」プロジェクトを展開するした中にある「src/main/java」のフォルダの中にJavaのプログラムを作成します。
 
-実際にプログラムを作成します。「src」を右クリックし、「New」>「Servlet」を選びます。
+実際にプログラムを作成します。「src/main/java」を右クリックし、「New」>「Servlet」を選びます。
 
-![Screenshot](image/image13.png)
+![Screenshot](image/image15.png)
 
 「package」に`hello`、「Class name」に`HelloServlet`と入力し、「Next」を押します。Servletでは**必ず**パッケージを宣言するようにしてください。
 
-![Screenshot](image/image14.png)
+![Screenshot](image/image16.png)
 
 次の画面は、そのまま「Next」を押します。
 
 最後の画面では、「Constructors from superclass」と「doPost」のチェックを外し、「Finish」を押します。
 
-![Screenshot](image/image15.png)
+![Screenshot](image/image17.png)
 
 自動生成されるコメントは不要ですので削除し、`doGet`メソッドの中を次のように変更します。
 
@@ -133,17 +161,19 @@ C:\dev\Servlet\eclipse\eclipse.exe -vm C:\dev\Servlet\jdk-15.0.1\bin\javaw.exe -
 package hello;
 
 import java.io.IOException;
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 @WebServlet("/HelloServlet")
 public class HelloServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
         try (var pw = response.getWriter()) {
             pw.println("hello servlet");
         }
@@ -153,28 +183,28 @@ public class HelloServlet extends HttpServlet {
 
 これでプログラムの準備は完了です。最後に実行して確認します。実行するには、作成しているアプリケーションをTomcatに登録しておく必要があります。
 
-Eclipseの下部の「Servers」タブを選択し、表示されている「Tomcat v9.0 Server at localhost」の部分を右クリックし「Add and Remove」を選択します。
+Eclipseの下部の「Servers」タブを選択し、表示されている「Tomcat v10.0 Server at localhost」の部分を右クリックし「Add and Remove」を選択します。
 
-![Screenshot](image/image16.png)
+![Screenshot](image/image18.png)
 
 表示される画面では、Tomcatへの登録と登録解除を決定できます。「Available」にあるものが登録されていないもの、「Configured」にあるものが登録されているものになります。今回は、「hello」を登録したいので「hello」を選択し「Add」を押します。
 
-![Screenshot](image/image17.png)
+![Screenshot](image/image19.png)
 
 登録はこれで完了したので、Tomcatを起動しアプリケーションの動作確認をします。画面下のTomcatを選択し、「実行」ボタンを押します。
 
-![Screenshot](image/image18.png)
+![Screenshot](image/image20.png)
 
 そうすると、いろいろな文字が出ますがTomcatが「Started」と表示されれば起動が完了しています。
 
 最初の起動時だけ、Windows Defenderのファイアウォールの確認が出ますので、「アクセスを許可する」を選んでください。
 
-![Screenshot](image/image19.png)
+![Screenshot](image/image21.png)
 
 起動を確認したら、好きなブラウザーを起動し[http://localhost:8080/hello/HelloServlet](http://localhost:8080/hello/HelloServlet)にアクセスしてください。問題なければ、次のように表示されるはずです。
 
-![Screenshot](image/image20.png)
+![Screenshot](image/image22.png)
 
 これで確認完了です。Tomcatを停止するには、実行ボタンの右側に停止ボタンがあるので、それを押します。
 
-![Screenshot](image/image21.png)
+![Screenshot](image/image23.png)
