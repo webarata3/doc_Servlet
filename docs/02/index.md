@@ -139,7 +139,7 @@ Java 16対応するために、プラグインを追加します。
 
 ![Screenshot](image/image14.png)
 
-「Project Explorer」にプロジェクトが表示されるます。「hello」プロジェクトを展開するした中にある「src/main/java」のフォルダの中にJavaのプログラムを作成します。
+「Project Explorer」にプロジェクトが表示されるます。「hello」プロジェクトを展開し、中にある「src/main/java」のフォルダの中にJavaのプログラムを作成します。
 
 実際にプログラムを作成します。「src/main/java」を右クリックし、「New」>「Servlet」を選びます。
 
